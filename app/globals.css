@@ -27,7 +27,10 @@
     @apply text-black/80 leading-8;
   }
   a {
-    @apply text-white hover:text-orange transition-all duration-300 cursor-pointer
+    @apply text-white hover:text-orange transition-all duration-300 cursor-pointer;
+  }
+  label {
+    @apply text-white text-sm uppercase font-normal block mb-2;
   }
 }
 
