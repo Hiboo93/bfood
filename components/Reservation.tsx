@@ -24,7 +24,7 @@ const Reservation = (props: Props) => {
         <ReservationForm />
       </motion.div>
     </motion.section>
-  )
-}
+  );
+};
 
 export default Reservation
