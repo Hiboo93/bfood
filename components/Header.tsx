@@ -51,7 +51,7 @@ const Header = (props: Props) => {
             </Button>
           </ScrollLink>
           {/* mobile nav */}
-          <NavMobile containerStyles="xl:hidden" iconStyles="" linkStyles="" />
+          <NavMobile containerStyles="xl:hidden" iconStyles="text-3xl" linkStyles="uppercase" />
         </div>
       </div>
     </header>
