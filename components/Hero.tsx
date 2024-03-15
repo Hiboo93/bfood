@@ -10,7 +10,7 @@ type Props = {}
 
 const Hero = (props: Props) => {
   return (
-    <section className="bg-hero bg-no-repeat xl:bg-cover xl:h-[1098px] py-40 pb-32 xl:py-0" id="home">
+    <section className="bg-hero bg-no-repeat relative xl:bg-cover xl:h-[1098px] py-40 pb-32 xl:py-0" id="home">
       <div className="container mx-auto">
         {/* text & img */}
         <div className="flex items-center xl:h-[960px]">
