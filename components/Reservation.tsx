@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import ReservationForm from "./ReservationForm";
 
-type Props = {}
 
-const Reservation = (props: Props) => {
+const Reservation = () => {
   return (
     <motion.section 
       variants={fadeIn("up", 0.2)}

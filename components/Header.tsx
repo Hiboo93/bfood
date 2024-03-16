@@ -9,9 +9,7 @@ import Nav from "./Nav";
 import NavMobile from "./NavMobile";
 import { Button } from "./ui/button";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -29,7 +27,6 @@ const Header = (props: Props) => {
     };
   }, []);
 
-
   return (
     <header
       className={`${
@@ -44,7 +41,10 @@ const Header = (props: Props) => {
             <Image src="/logo.svg" width={75} height={30} alt="" />
           </Link>
           {/* nav */}
-          <Nav containerStyles="hidden xl:flex gap-x-12 text-white" linkStyles="capitalize" />
+          <Nav
+            containerStyles="hidden xl:flex gap-x-12 text-white"
+            linkStyles="capitalize"
+          />
           {/* btn */}
           <ScrollLink to="reservation" smooth={true}>
             <Button variant="orange" size="sm">
@@ -52,7 +52,11 @@ const Header = (props: Props) => {
             </Button>
           </ScrollLink>
           {/* mobile nav */}
-          <NavMobile containerStyles="xl:hidden" iconStyles="text-3xl" linkStyles="uppercase" />
+          <NavMobile
+            containerStyles="xl:hidden"
+            iconStyles="text-3xl"
+            linkStyles="uppercase"
+          />
         </div>
       </div>
     </header>

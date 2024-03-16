@@ -36,9 +36,8 @@ const menu: MenuType[] = [
   },
 ];
 
-type Props = {};
 
-const Menu = (props: Props) => {
+const Menu = () => {
   return (
     <section className="relative py-12 xl:py-24 bg-menu" id="menu">
       <div className="container mx-auto">
