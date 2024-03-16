@@ -25,9 +25,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-type Props = {}
 
-const ReservationForm = (props: Props) => {
+const ReservationForm = () => {
   const [date, setDate] = React.useState<Date>();
   return (
     <form className="flex flex-col gap-y-10">
@@ -48,24 +47,24 @@ const ReservationForm = (props: Props) => {
           <div>
             <Label>date</Label>
             <Popover>
-            <PopoverTrigger asChild>
-              <Button
-                variant={"input"}
-                className={cn("w-full justify-start text-left font-normal")}
-              >
-                <CalendarIcon className="mr-2 h-4 w-4" />
-                {date ? format(date, "PPP") : <span>Pick a date</span>}
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
-              <Calendar
-                mode="single"
-                selected={date}
-                onSelect={setDate}
-                initialFocus
-              />
-            </PopoverContent>
-          </Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={"input"}
+                  className={cn("w-full justify-start text-left font-normal")}
+                >
+                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  {date ? format(date, "PPP") : <span>Pick a date</span>}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="start">
+                <Calendar
+                  mode="single"
+                  selected={date}
+                  onSelect={setDate}
+                  initialFocus
+                />
+              </PopoverContent>
+            </Popover>
           </div>
           {/* select */}
           <div>
@@ -88,9 +87,11 @@ const ReservationForm = (props: Props) => {
           </div>
         </div>
       </div>
-      <Button className="uppercase w-full xl:w-auto xl:self-end">Book a table</Button>
+      <Button className="uppercase w-full xl:w-auto xl:self-end">
+        Book a table
+      </Button>
     </form>
-  )
-}
+  );
+};
 
-export default ReservationForm
+export default ReservationForm;

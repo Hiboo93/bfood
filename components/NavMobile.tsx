@@ -11,7 +11,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-
 type Props = {
   containerStyles: string;
   iconStyles: string;
@@ -55,7 +54,6 @@ export const NAVLINKSMOBILE: NavLinkMobileType[] = [
 const NavMobile = ({ containerStyles, iconStyles, linkStyles }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
-
   return (
     <div className={`${containerStyles}`}>
       {/* nav trigger btn */}
@@ -85,7 +83,13 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }: Props) => {
           {/* link */}
           <div className="flex flex-col gap-y-8">
             {NAVLINKSMOBILE.map((link, index) => (
-              <ScrollLink key={index} to={link.path} offset={link.offset} smooth={false} className="flex items-center gap-x-3">
+              <ScrollLink
+                key={index}
+                to={link.path}
+                offset={link.offset}
+                smooth={false}
+                className="flex items-center gap-x-3"
+              >
                 <div className={`${iconStyles}`}>{link.icon}</div>
                 <div className={`${linkStyles}`}>{link.name}</div>
               </ScrollLink>
